@@ -12,16 +12,19 @@ services:
       - db
 
   db:
-    image: mysql:8.0.32
+    image: mysql:latest
     restart: always
     environment:
-      MY_DATABASE: admin
-      MYSQL_USER: root
-      MYSQL_PASSWORD: root
-      MYSQL_ROOT_PASSWORD: root
+      MYSQL_ROOT_PASSWORD: your_password
+      MYSQL_DATABASE: admin
+      MYSQL_USER: your_username
+      MYSQL_PASSWORD: your_password
     volumes:
       - .dbdata:/var/lib/mysql
     ports:
-      - 3306:3306
+      - "3306:3306"
+
+volumes:
+  dbdata:
 
 
