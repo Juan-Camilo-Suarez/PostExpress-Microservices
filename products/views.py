@@ -20,7 +20,9 @@ class ProductViewSet(viewsets.ViewSet):
         return Response(serializer.data, status=status.HTTP_201_CREATED)
 
     def retrieve(self, request, pk=None):
-        pass
+        products = Product.objects.get(id=pk)
+        serializer = ProductSerializer(products)
+        return Response(serializer.data)
 
     def update(self, request, pk=None):
         pass
