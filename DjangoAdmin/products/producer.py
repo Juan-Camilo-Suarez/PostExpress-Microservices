@@ -7,4 +7,4 @@ channel = connection.channel()
 
 
 def publish():
-    channel.basic_publish(exchange='', routing_key='admin', body='Hello')
+    channel.basic_publish(exchange='', routing_key='main', body='Hello main')
