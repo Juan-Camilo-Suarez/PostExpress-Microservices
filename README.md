@@ -17,6 +17,7 @@ be configured to listen on a specific queue, allowing it to receive messages fro
 Additionally, services can send messages to other queues to notify other services of changes or results.
 
 ## 2. Architecture
+[label](about:blank#blocked)
 ## 3. Installing and running the project
 ### 3.1. [DjangoAdmin](https://gitlab.com/juancamilosuarez3/postexpress/-/tree/master/DjangoAdmin)
 ### 3.2. [MainFlask](https://gitlab.com/juancamilosuarez3/postexpress/-/tree/master/MainFlask)
