@@ -1,1 +1,1 @@
-MIGRATE = python manager.py db init
+create file migrations =flask db init
