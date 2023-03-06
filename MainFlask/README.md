@@ -17,7 +17,7 @@ migrate = flask db upgrade
    ```pip install -r requirements.txt ```
 4. Install MYSQL from Docker:\
    ``` docker-compose up -d db  ```
-5. Create file migrations (in this case this step you can ignore ) :\
+5. Create file migrations :\
    ```flask db init```
 6. Make a migration to database:\
    ```flask db migrate```
@@ -28,5 +28,15 @@ migrate = flask db upgrade
 
 ### 1.2 Form with Docker-compose
 
-1. Execute Docker-Compose:\
+1. Install MYSQL from Docker:\
+   ``` docker-compose up -d db  ```
+2. Execute Docker-Compose:\
    ``` MainFlask/docker-compose up```
+3. Create file migrations (in this case this step you can ignore ) :\
+   ```flask db init```
+4. Make a migration to database:\
+   ```flask db migrate```
+5. Apply migrations to database:\
+   ```flask db upgrade```
+6. Server start:\
+   ```python main.py```
