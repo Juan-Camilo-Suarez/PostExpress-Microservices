@@ -349,4 +349,3 @@ poetry.toml
 # End of https://www.toptal.com/developers/gitignore/api/python,django,flask
 ### db ###
 .dbdata
-/MainFlask/migrations/
