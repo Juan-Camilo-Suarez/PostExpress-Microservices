@@ -29,7 +29,7 @@ services:
       MYSQL_USER: your_username
       MYSQL_PASSWORD: your_password
     volumes:
-      - .dbdata:/var/lib/mysql
+      - .dbdata:/var/lib/mysql:z
     ports:
       - "33067:3306"
 
