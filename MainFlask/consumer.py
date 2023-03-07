@@ -3,6 +3,7 @@ from flask import Flask
 from flask_sqlalchemy import SQLAlchemy
 
 from app import Product
+from app import db, app
 
 params = pika.URLParameters('amqps://mjwdfmdv:1IvG-RJ-ZLYLN92M9HPWPZNwrCuSO1RS@rat.rmq2.cloudamqp.com/mjwdfmdv')
 connection = pika.BlockingConnection(params)
@@ -11,11 +12,11 @@ channel = connection.channel()
 
 channel.queue_declare(queue='main')
 
-# create Flask app instance
-app = Flask(__name__)
+# # create Flask app instance
+# app = Flask(__name__)
 # initialize SQLAlchemy with app instance
-app.config["SQLALCHEMY_DATABASE_URI"] = 'mysql://your_username:your_password@db/main'
-db = SQLAlchemy(app)
+# app.config["SQLALCHEMY_DATABASE_URI"] = 'mysql://your_username:your_password@db/main'
+# db = SQLAlchemy(app)
 
 
 def callback(ch, method, properties, body):

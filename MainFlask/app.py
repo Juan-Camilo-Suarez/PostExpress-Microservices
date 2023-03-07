@@ -6,8 +6,7 @@ from flask_migrate import Migrate
 from flask_sqlalchemy import SQLAlchemy
 from sqlalchemy import UniqueConstraint
 
-from main import app
-
+app = Flask(__name__)
 app.config["SQLALCHEMY_DATABASE_URI"] = 'mysql://your_username:your_password@db/main'
 CORS(app)
 
