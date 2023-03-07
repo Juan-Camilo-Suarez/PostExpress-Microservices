@@ -32,11 +32,13 @@ migrate = flask db upgrade
    ``` docker-compose up -d db  ```
 2. Execute Docker-Compose:\
    ``` MainFlask/docker-compose up```
-3. Create file migrations (in this case this step you can ignore ) :\
+3. Open docker-compose console:\
+   ```docker-compose exec backend sh ```
+4. Create file migrations (in this case this step you can ignore ) :\
    ```flask db init```
-4. Make a migration to database:\
+5. Make a migration to database:\
    ```flask db migrate```
-5. Apply migrations to database:\
+6. Apply migrations to database:\
    ```flask db upgrade```
-6. Server start:\
+7. Server start:\
    ```python main.py```
