@@ -4,6 +4,7 @@ import requests
 from flask import Flask, jsonify, abort
 from flask_sqlalchemy import SQLAlchemy
 
+from producer import publish
 from app import Product, app, ProductUser, db
 
 
@@ -26,7 +27,7 @@ def like(id):
         db.session.add(productUser)
         db.session.commit()
 
-        # publish('product_liked', id)
+        publish('product_liked', id)
     except:
         abort(400, 'You already liked this product')
 
