@@ -21,6 +21,15 @@ const Products = () => {
             }
         )()
     }, [])
+    const del = async (id: number) => {
+        if (window.confirm('Are you sure you want to delete this product?')) {
+            await fetch(`http://localhost:8000/api/products/${id}`, {
+                method: 'DELETE'
+            });
+
+            setProducts(products.filter((p: Product) => p.id !== id));
+        }
+    }
     return (
         <Wrapper>
             <div>
@@ -45,15 +54,15 @@ const Products = () => {
                                     <td>{p.title}</td>
                                     <td>{p.description}</td>
                                     <td>{p.likes}</td>
-                                    {/*<td>*/}
-                                    {/*    <div className="btn-group mr-2">*/}
-                                    {/*        <Link to={`/admin/products/${p.id}/edit`}*/}
-                                    {/*              className="btn btn-sm btn-outline-secondary">Edit</Link>*/}
-                                    {/*        <a href="#" className="btn btn-sm btn-outline-secondary"*/}
-                                    {/*           onClick={() => del(p.id)}*/}
-                                    {/*        >Delete</a>*/}
-                                    {/*    </div>*/}
-                                    {/*</td>*/}
+                                    <td>
+                                        <div className="btn-group mr-2">
+                                            {/*<Link to={`/admin/products/${p.id}/edit`}*/}
+                                            {/*      className="btn btn-sm btn-outline-secondary">Edit</Link>*/}
+                                            <a href="#" className="btn btn-sm btn-outline-secondary"
+                                               onClick={() => del(p.id)}
+                                            >Delete</a>
+                                        </div>
+                                    </td>
                                 </tr>
                             )
                         })}
