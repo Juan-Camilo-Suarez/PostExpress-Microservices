@@ -32,7 +32,11 @@ Additionally, services can send messages to other queues to notify other service
 * RabbitMQ
 * Queue Service
 ### 1.3 Limitations & Unknowns
-
+* Flask
+* Connect Flask with Mysql
+* flask Migrations
+* React
+* React Setup
 ## 2. Architecture
 ### 2.1 Data Base Structure
 ### Django Data Base (MySql)
