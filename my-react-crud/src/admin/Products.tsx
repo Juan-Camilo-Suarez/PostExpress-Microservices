@@ -16,7 +16,7 @@ const Products = () => {
 
                 const data = await response.json();
 
-                console.log(data);
+                // console.log(data);
                 setProducts(data);
             }
         )()
@@ -32,6 +32,11 @@ const Products = () => {
     }
     return (
         <Wrapper>
+            <div className="pt-3 pb-2 mb-3 border-bottom">
+                <div className="btn-toolbar mb-2 mb-md-0">
+                    <Link to='/admin/products/create' className="btn btn-sm btn-outline-secondary">Add</Link>
+                </div>
+            </div>
             <div>
                 <div className="table-responsive">
                     <table className="table table-striped table-sm">
