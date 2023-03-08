@@ -4,7 +4,7 @@ const Nav = () => {
     return (
 
         <header className="navbar navbar-dark sticky-top bg-dark flex-md-nowrap p-0 shadow">
-            <a className="navbar-brand col-md-3 col-lg-2 me-0 px-3 fs-6" href="#">Company name</a>
+            <a className="navbar-brand col-md-3 col-lg-2 me-0 px-3 fs-6" href="my-react-crud/src/admin/components#">Company name</a>
             <button className="navbar-toggler position-absolute d-md-none collapsed" type="button"
                     data-bs-toggle="collapse"
                     data-bs-target="#sidebarMenu" aria-controls="sidebarMenu" aria-expanded="false"
@@ -15,7 +15,7 @@ const Nav = () => {
                    type="text" placeholder="Search" aria-label="Search"/>
             <div className="navbar-nav">
                 <div className="nav-item text-nowrap">
-                    <a className="nav-link px-3" href="#">Sign out</a>
+                    <a className="nav-link px-3" href="my-react-crud/src/admin/components#">Sign out</a>
                 </div>
             </div>
         </header>

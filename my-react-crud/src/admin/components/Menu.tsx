@@ -6,7 +6,7 @@ const Menu = () => {
             <div className="position-sticky pt-3 sidebar-sticky">
                 <ul className="nav flex-column">
                     <li className="nav-item">
-                        <a className="nav-link active" aria-current="page" href="#">
+                        <a className="nav-link active" aria-current="page" href="my-react-crud/src/admin/components#">
                             <span data-feather="home" className="align-text-bottom"></span>
                             Products
                         </a>
