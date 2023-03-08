@@ -24,6 +24,13 @@ be configured to listen on a specific queue, allowing it to receive messages fro
 Additionally, services can send messages to other queues to notify other services of changes or results.
 
 ### 1.2 Main features
+* Connect Django with MySQL with Docker
+* User Endpoint with APIView
+* Flask Setup with Docker
+* Django Producer and Consumer
+* Flask Producer and Consumer
+* RabbitMQ
+* Queue Service
 ### 1.3 Limitations & Unknowns
 
 ## 2. Architecture
